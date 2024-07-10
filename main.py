@@ -24,5 +24,5 @@ for author in authors:
 
 # Sleep for a random interval between 1 and 3 seconds
 s = random.uniform(1, 3)
-print(f"Sleeping for {sleep_time:.2f} seconds")
-time.sleep(sleep_time)
+print(f"Sleeping for {s:.2f} seconds")
+time.sleep(s)
