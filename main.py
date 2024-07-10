@@ -28,7 +28,7 @@ authors = soup.find_all("small", class_="author")
 for author in authors:
     print(author.text)
 
-# Sleep for a random interval between 1 and 5 seconds
-sleep_time = random.uniform(1, 5)
-print(f"Sleeping for {sleep_time:.2f} seconds")
-time.sleep(sleep_time)
+# Sleep for a random interval between 1 and 3 seconds
+s = random.uniform(1, 3)
+print(f"Sleeping for {s:.2f} seconds")
+time.sleep(s)
