@@ -23,6 +23,6 @@ for author in authors:
     print(author.text)
 
 # Sleep for a random interval between 1 and 3 seconds
-sleep_time = random.uniform(1, 3)
+s = random.uniform(1, 3)
 print(f"Sleeping for {sleep_time:.2f} seconds")
 time.sleep(sleep_time)
