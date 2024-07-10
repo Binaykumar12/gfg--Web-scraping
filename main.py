@@ -6,8 +6,14 @@ import random
 # URL of the page to scrape
 url = "https://quotes.toscrape.com/"
 
-# Make an HTTP GET request to the URL
-response = requests.get(url)
+# Define headers to mimic a browser request
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.5"
+}
+
+# Make an HTTP GET request to the URL with headers
+response = requests.get(url, headers=headers)
 
 # Parse the HTML content using BeautifulSoup
 soup = BeautifulSoup(response.text, "html.parser")
@@ -22,7 +28,7 @@ authors = soup.find_all("small", class_="author")
 for author in authors:
     print(author.text)
 
-# Sleep for a random interval between 1 and 3 seconds
-s = random.uniform(1, 3)
-print(f"Sleeping for {s:.2f} seconds")
-time.sleep(s)
+# Sleep for a random interval between 1 and 5 seconds
+sleep_time = random.uniform(1, 5)
+print(f"Sleeping for {sleep_time:.2f} seconds")
+time.sleep(sleep_time)
