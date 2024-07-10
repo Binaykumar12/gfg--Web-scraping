@@ -32,6 +32,4 @@ for author in authors:
 s = random.uniform(1, 3)
 print(f"Sleeping for {s:.2f} seconds")
 time.sleep(s)
-s=random.uniform(1,3)
-print(f"sleeping time {s:.2f}seconds")
-time.sleep(s)
+
